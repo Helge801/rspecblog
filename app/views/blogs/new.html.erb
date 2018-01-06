@@ -1,0 +1,11 @@
+<%= form_for(@blog) do |f| %>
+
+  <%= f.text_field :title, class: 'form-control', placeholder: 'Title' %>
+
+  <%= f.text_area :body, class: 'form-control', placeholder: 'Body' %>
+
+  <%= f.text_field :image, class: 'form-control', placeholder: 'Image' %>
+
+  <%= f.submit "Save", class: 'btn btn-primary' %>
+  
+<% end %>
