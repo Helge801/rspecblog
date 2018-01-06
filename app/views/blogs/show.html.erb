@@ -1,1 +1,5 @@
-<%= @blog.inspect %>
+<div class="container">
+  <%= image_tag @blog.image, alt: @blog.image %>
+  <h1><%= @blog.title %></h1>
+  <p><%= @blog.body %></p>
+</div>
