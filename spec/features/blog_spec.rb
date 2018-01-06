@@ -26,7 +26,7 @@ describe 'navigate' do
       
       fill_in 'blog[title]', with: "Some title"
       fill_in 'blog[body]', with: "Body"
-      fill_in 'blog[image]', with: "NyanCat"
+      fill_in 'blog[image]', with: Faker::LoremPixel.image("600x300")
 
       expect(page).to have_content(/Body/)
     end
