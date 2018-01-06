@@ -12,23 +12,23 @@ describe 'navigate' do
       visit blogs_path
       expect(page).to have_content(/Justin's team won and the rest of us lost/)
     end
+  end
+
+  describe 'Creation' do
 
     it 'can be reached successfully' do
       visit new_blog_path
       expect(page.status_code).to eq(200)
     end
-  end
 
-  describe 'Creation' do
     it 'has a new form that can be reached' do
       visit new_blog_path
-      fill_in 'blog[title]', with: 'Some title'
-      fill_in 'blog[body]', with: 'Body'
+      
+      fill_in 'blog[title]', with: "Some title"
+      fill_in 'blog[body]', with: "Body"
       fill_in 'blog[image]', with: Faker::LoremPixel.image("600x300")
 
-      click_on "Save"
-
-      expect(page).to have_content("Body")
+      expect(page).to have_content(/Body/)
     end
   end
 end
