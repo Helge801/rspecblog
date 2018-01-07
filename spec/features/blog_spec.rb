@@ -28,6 +28,8 @@ describe 'navigate' do
       fill_in 'blog[body]', with: "Body"
       fill_in 'blog[image]', with: Faker::LoremPixel.image("600x300")
 
+      click_on "Save"
+
       expect(page).to have_content(/Body/)
     end
   end

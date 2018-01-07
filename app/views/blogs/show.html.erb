@@ -2,4 +2,5 @@
   <%= image_tag @blog.image, alt: @blog.image %>
   <h1><%= @blog.title %></h1>
   <p><%= @blog.body %></p>
+  <%= link_to "Delete", blog_path(@blog), method: :delete, class: "btn btn-warning", data: {:confirm => 'Are you sure?'} %>
 </div>
